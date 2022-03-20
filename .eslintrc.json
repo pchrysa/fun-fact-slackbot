@@ -1,0 +1,117 @@
+{
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "jest",
+    "import",
+    "more"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "tsconfigRootDir": "./",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "import/ignore": [
+      "node_modules"
+    ]
+  },
+
+  "rules": {
+    "curly": "error",
+    "eqeqeq": "error",
+    "import/no-duplicates": "error",
+    "import/no-named-as-default": 0,
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": false,
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "jest/no-focused-tests": "error",
+    "jest/no-disabled-tests": "error",
+    "jest/no-restricted-matchers": [
+      "error",
+      {
+        "toThrowErrorMatchingSnapshot": "Use `toThrowErrorMatchingInlineSnapshot() or toThrow()` instead."
+      }
+    ],
+    "jest/prefer-to-have-length": "error",
+    "more/force-native-methods": "error",
+    "more/no-then": "error",
+    "no-console": "warn",
+    "no-constant-condition": "error",
+    "no-irregular-whitespace": "error",
+    "no-process-env": "error",
+    "no-prototype-builtins": "off",
+    "no-return-await": "error",
+    "no-unneeded-ternary": [
+      "error",
+      {
+        "defaultAssignment": false
+      }
+    ],
+    "no-unused-vars": "off",
+    "object-curly-spacing": ["error", "always"],
+    "object-shorthand": ["error", "properties"],
+    "prefer-arrow-callback": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": false,
+        "avoidEscape": true
+      }
+    ],
+    "semi": ["error", "always"],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false
+      }
+    ],
+    "sort-keys": "off",
+
+    "import/no-named-as-default-member": 0,
+    "jest/no-deprecated-functions": 0,
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "comments": 200,
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ]
+  },
+  "env": {
+    "commonjs": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  }
+}

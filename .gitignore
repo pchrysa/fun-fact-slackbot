@@ -1,0 +1,11 @@
+node_modules
+.env
+.cache
+dist
+*.log
+.DS_Store
+.cache
+junit.xml
+coverage
+reports
+.env
