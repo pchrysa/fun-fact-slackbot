@@ -1,4 +1,4 @@
-#How to install and run
+# How to install and run
 
 *development*
 
