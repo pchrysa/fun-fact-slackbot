@@ -22,10 +22,10 @@ module.exports = {
   coverageDirectory: './reports/coverage',
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
+      branches: 75,
+      functions: 75,
+      lines: 75,
+      statements: 75,
     },
   },
 
@@ -39,6 +39,7 @@ module.exports = {
     '@src(.*)$': '<rootDir>/src$1',
     '@config': '<rootDir>/src/config/config',
     '@controllers(.*)$': '<rootDir>/src/controllers$1',
+    '@middlewares(.*)$': '<rootDir>/src/middlewares$1',
     '@services(.*)$': '<rootDir>/src/services$1',
     '@utils(.*)$': '<rootDir>/src/utils$1',
   },
