@@ -4,6 +4,7 @@ import express, { Express } from 'express';
 import routes from './routes';
 
 import { getConfig } from '@config';
+import { errorHandler } from '@middlewares/errorHandler';
 
 const { PORT: port } = getConfig();
 
@@ -17,6 +18,8 @@ const setUpApp = (): Express => {
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.use('/', routes);
+
+  app.use(errorHandler);
 
   return app;
 };

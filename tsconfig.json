@@ -31,7 +31,8 @@
       "@config": ["src/config/config"],
       "@utils/*": ["src/utils/*"],
       "@controllers/*": ["src/controllers/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@middlewares/*": ["src/middlewares/*"]
     },
     "plugins": [
       {
